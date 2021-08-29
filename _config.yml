@@ -8,6 +8,7 @@ defaults:
       path: ""
     values:
       layout: "default"
+      listed_in_nav: true
 
 
 _editor:
