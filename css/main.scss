@@ -1,0 +1,25 @@
+---
+---
+
+@import 'variables.scss';
+@import 'elements.scss';
+@import 'utility.scss';
+@import 'syntax.scss';
+@import 'components/nav.scss';
+@import 'components/cta.scss';
+@import 'components/hero.scss';
+@import 'components/callout.scss';
+@import 'components/quotes.scss';
+@import 'components/button.scss';
+@import 'components/footer.scss';
+@import 'components/side-by-side.scss';
+@import 'components/editable.scss';
+@import 'components/post.scss';
+@import 'components/tags.scss';
+@import 'components/code-block.scss';
+
+.container {
+	max-width: 900px;
+	padding: 0 40px;
+	margin: 0 auto;
+}

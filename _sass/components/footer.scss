@@ -1,0 +1,39 @@
+
+.c-footer {
+	background: var(--color-stratus);
+	padding: 80px 0;
+
+	&__columns {
+		display: flex;
+		gap: 40px;
+		justify-content: space-between;
+		margin: 40px 0;
+		flex-wrap: wrap;
+	}
+	
+	&__column {
+		flex: 1 1 200px;
+		max-width: 350px;
+	}
+
+	a {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		text-decoration: none;
+	}
+
+	ul, li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		margin: 0 0 10px 0;
+	}
+
+	svg + p {
+		margin-top: 10px;
+	}
+}

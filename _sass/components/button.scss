@@ -1,0 +1,26 @@
+.c-buttons-row {
+	display: flex;
+	margin-top: 40px;
+	gap: 20px;
+
+	&--centered {
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.c-button {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 16px 20px;
+	text-decoration: none;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: bold;
+
+	&--primary {
+		background: var(--color-brand);
+		color: #fff;
+	}
+}

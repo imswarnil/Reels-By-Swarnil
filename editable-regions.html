@@ -1,0 +1,155 @@
+---
+title: Editable regions
+---
+
+<div class="c-hero">
+	<div class="c-hero__content">
+		<h1 class="hero__header dark-orange">Edit what you see with Editable Regions</h1>
+		<p>Simple HTML content is editable in real time, right on the page. Content editors will see these regions marked by yellow borders here in the Visual Editor. You can configure exactly what is editable with this class in your code.</p>
+	</div>
+</div>
+
+<div class="c-side-by-side">
+	<div class="c-side-by-side__content">
+		<h2>Inline editables</h2>
+
+		<h3>p, h1 - h5, a, span, button, li, img</h3>
+
+		<p>Adding <code>class="editable"</code> to any inline HTML element will make it editable in the Visual Editor. You’ll see a yellow outline indicating editable elements. Try it for yourself in the window below!</p>
+
+		<p>For text, you’ll see simple formatting options. Links and buttons receive a drop-down menu to manage the link and descriptions.</p>
+
+		<p>The images drop-down helps you add or change images for those already in your CloudCannon folders. It also makes it easy to update image metadata details such as alt-text, description and title.</p>
+	</div>
+	<div class="c-side-by-side__code">
+		<div class="c-code-block">
+			<div class="c-code-block__title">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M2.95229 17.8286L1.38086 0.190491H18.6571L17.0856 17.8191L10.0047 19.781" fill="white"/>
+					<path d="M10.019 18.281V1.63812H17.0809L15.7333 16.6857" fill="#CFCFCF"/>
+					<path d="M4.59033 3.79526H10.0189V5.95716H6.96177L7.16177 8.17145H10.0189V10.3286H5.18081L4.59033 3.79526ZM5.27605 11.4143H7.44748L7.59986 13.1429L10.0189 13.7905V16.0476L5.58081 14.8095" fill="#888888"/>
+					<path d="M15.4283 3.79526H10.0093V5.95716H15.2283L15.4283 3.79526ZM15.0331 8.17145H10.0093V10.3334H12.6759L12.4236 13.1429L10.0093 13.7905V16.0381L14.4378 14.8095" fill="#393939"/>
+				</svg>
+				index.html
+			</div>
+
+			<div class="c-code-block__content">
+{% assign editable_class = "editable" %}
+{% highlight html %}
+<h3 class="{{ editable_class }}">
+  ...
+</h3>
+
+<p class="{{ editable_class }}">
+  ...
+</p>
+
+<a class="{{ editable_class }} c-button" href="...">
+  ...
+</a>
+
+<img class="{{ editable_class }}" src="...">
+{% endhighlight %}
+			</div>
+		</div>
+	</div>
+</div>
+<div class="c-editable">
+	<div class="c-editable__half">
+		<h3 class="editable u-fancy-heading">Editing your website content isn’t a <strong>difficult job</strong>.</h3>
+		
+		<p class="editable">It can be as simple as this, <a href="/">if you want.</a></p>
+
+		<div class="c-buttons-row">
+			<a class="editable c-button c-button--primary" href="/">Edit me</a>
+		</div>
+	</div>
+	<div class="c-editable__half">
+		<img class="editable" src="/images/hills.png">
+	</div>
+</div>
+<p class="c-editable-disclaimer"></p>
+
+
+<div class="c-side-by-side">
+	<div class="c-side-by-side__content">
+		<h2>Block editables</h2>
+
+		<h3>div, section, aside, main</h3>
+
+		<p>Editable Regions are flexible and can work across larger HTML elements, too. Adding the "editable" class to a div or section makes the tags within it completely editable.</p>
+
+		<p>The block toolbar gives a wide range of editing options — you can change heading tags, start a quote block, create a list, and more.</p>
+
+		<div class="c-callout">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M11 7H13V9H11V7ZM11 11H13V17H11V11ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="#034AD8"/>
+			</svg>
+				
+			<p>For complex  structures or page layouts, we recommend you use multiple editable regions across your individual elements. </p>
+		</div>
+	</div>
+	<div class="c-side-by-side__code">
+		<div class="c-code-block">
+			<div class="c-code-block__title">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M2.95229 17.8286L1.38086 0.190491H18.6571L17.0856 17.8191L10.0047 19.781" fill="white"/>
+					<path d="M10.019 18.281V1.63812H17.0809L15.7333 16.6857" fill="#CFCFCF"/>
+					<path d="M4.59033 3.79526H10.0189V5.95716H6.96177L7.16177 8.17145H10.0189V10.3286H5.18081L4.59033 3.79526ZM5.27605 11.4143H7.44748L7.59986 13.1429L10.0189 13.7905V16.0476L5.58081 14.8095" fill="#888888"/>
+					<path d="M15.4283 3.79526H10.0093V5.95716H15.2283L15.4283 3.79526ZM15.0331 8.17145H10.0093V10.3334H12.6759L12.4236 13.1429L10.0093 13.7905V16.0381L14.4378 14.8095" fill="#393939"/>
+				</svg>
+				index.html
+			</div>
+
+			<div class="c-code-block__content">
+{% highlight html %}
+<div class="{{ editable_class }}">
+  ...
+</div>
+
+<aside class="{{ editable_class }}">
+  ...
+</aside>
+{% endhighlight %}
+			</div>
+		</div>
+	</div>
+</div>
+<div class="c-editable">
+	<div class="c-editable__half editable">
+		<h2>Your editors can edit and style this</h2>
+		
+		<p>Adding an editable class to a div or section allows your content team to layout all the elements in the block using a WYSIWYG.</p>
+
+		<ul>
+			<li>List styling such ad bullet points and numbered lists. </li>
+			<li>Select paragraph styles from your CSS header sizes.</li>
+		</ul>
+	</div>
+	<aside class="c-editable__half editable">
+		<h3>Give your editors access to your style sheet.</h3>
+		
+		<p>You set the styling options in your CSS. So editors can do basic formatting on brand. </p>
+
+		<p>Gift the freedom to style and edit.</p>
+
+		<blockquote>As an editor, you can add a quote style when the content needs it - all without asking for help.</blockquote>
+	</aside>
+</div>
+<p class="c-editable-disclaimer"></p>
+
+<div class="c-cta">
+	<div class="c-cta__inner">
+		<h1>Up next, the editor sidebar</h1>
+		<p>Along with the Front Matter Inputs and array controls to edit your page.</p>
+
+		<div class="c-buttons-row c-buttons-row--centered">
+			<a href="/data-editing/" class="c-button c-button--primary">
+				Show me the sidebar
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M12 20L10.59 18.59L16.17 13H4V11L16.17 11L10.58 5.42L12 4L20 12L12 20Z" fill="white"/>
+				</svg>
+			</a>
+		</div>
+	</div>
+</div>

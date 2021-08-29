@@ -1,0 +1,15 @@
+title: "CloudCannon Demo"
+
+permalink: pretty
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+
+
+_editor:
+  default_path: /editable-regions/
+

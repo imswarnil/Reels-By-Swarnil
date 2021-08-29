@@ -1,0 +1,179 @@
+---
+title: Control your site with Front Matter
+description: Front matter is a common feature in SSGs to set custom metadata on a page, and works with either JSON, YAML or TOML.  CloudCannon’s editing interfaces help you manage your front matter by allowing you to select the input controls.   
+
+inputs:
+  title: 'Click on this region to edit its contents from the Sidebar.'
+  image: '/images/hills.png'
+  date: 2021-08-12T18:30:00.000Z
+  categories:
+    - Documentation
+    - CloudCannon
+  url: https://cloudcannon.com/documentation/edit/interfaces/inputs/#inputs
+
+quotes:
+  - name: 'Betty Jefferson'
+    position: 'Jamstack Developer'
+    image: /images/betty.svg
+    quote_markdown: '“This quotation can be edited via the front matter textarea input.”'
+  - name: 'Jamie Mills'
+    position: 'Jamstack Developer'
+    image: /images/jamie.svg
+    quote_markdown: '“You can also reorder quotations via the front matter arrays input.”'
+---
+
+<div class="c-hero">
+	<div class="c-hero__content">
+		<h1 class="hero__header dark-orange">{{ page.title }}</h1>
+		<p>{{ page.description }}</p>
+	</div>
+</div>
+
+<div class="c-side-by-side">
+	<div class="c-side-by-side__content">
+		<h2>Your Data, Your Inputs</h2>
+
+		<p>CloudCannon allows editors to edit page data through a wide range of configurable inputs. You decide the best editing experience for your team. Add more inputs or hide some to fine tune editing. Choose form a wide range of inputs:</p>
+
+		<ul>
+			<li>Text and number fields </li>
+			<li>Rich text WYSIWYG editor for Markup</li>
+			<li>File pickers for images, files and documents</li>
+			<li>Date and time pickers</li>
+			<li>Link pickers for urls</li>
+			<li>Colour pickers</li>
+			<li>And more...</li>
+		</ul>
+
+		<p>Try a few of the options out below.</p>
+	</div>
+	<div class="c-side-by-side__code">
+		<div class="c-code-block">
+			<div class="c-code-block__title">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M2.95229 17.8286L1.38086 0.190491H18.6571L17.0856 17.8191L10.0047 19.781" fill="white"/>
+					<path d="M10.019 18.281V1.63812H17.0809L15.7333 16.6857" fill="#CFCFCF"/>
+					<path d="M4.59033 3.79526H10.0189V5.95716H6.96177L7.16177 8.17145H10.0189V10.3286H5.18081L4.59033 3.79526ZM5.27605 11.4143H7.44748L7.59986 13.1429L10.0189 13.7905V16.0476L5.58081 14.8095" fill="#888888"/>
+					<path d="M15.4283 3.79526H10.0093V5.95716H15.2283L15.4283 3.79526ZM15.0331 8.17145H10.0093V10.3334H12.6759L12.4236 13.1429L10.0093 13.7905V16.0381L14.4378 14.8095" fill="#393939"/>
+				</svg>
+				index.html
+			</div>
+			<div class="c-code-block__content">
+{% highlight yaml %}
+---
+inputs:
+  title: '...'
+  image: '...'
+  date: '...'
+  categories:
+    - '...'
+  url: '...'
+---
+{% endhighlight %}
+			</div>
+		</div>
+	</div>
+</div>
+<div class="c-editable">
+	<div class="c-post cms-editor-link" data-cms-editor-link="cloudcannon:#inputs">
+		<div class="c-post__content">
+			<p class="c-post__date">{{ page.inputs.date | date_to_long_string }}</p>
+			<h3 class="c-post__heading u-fancy-heading">{{ page.inputs.title }}</h3>
+			
+			<ul class="c-tags">
+				{% for category in page.inputs.categories %}
+					<li class="c-tag">{{ category }}</li>
+				{% endfor %}
+			</ul>
+
+			<p><a href="{{ page.inputs.url }}">Read the article ></a></p>
+		</div>
+		<div class="c-post__image">
+			<img src="{{ page.inputs.image }}">
+		</div>
+	</div>
+</div>
+<p class="c-editable-disclaimer">Click save to see your changes update</p>
+
+
+<div class="c-side-by-side">
+	<div class="c-side-by-side__content">
+		<h2>Working with Arrays</h2>
+
+		<p>Your data isn’t always flat, arrays give the ability to add, remove and reorder content. CloudCannon gives you  control over every step of that process. </p>
+
+		<p>Arrays work straight out of the box by cloning existing items. You can extend this with Array structures which gives your editors a list of data structures to add. This can be used to create slideshows, gallerys, testimonials, configurable navigations and even full pages builders.</p>
+
+		<p>Try updating the quotes below to give them a go.</p>
+	</div>
+	<div class="c-side-by-side__code">
+		<div class="c-code-block">
+			<div class="c-code-block__title">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M2.95229 17.8286L1.38086 0.190491H18.6571L17.0856 17.8191L10.0047 19.781" fill="white"/>
+					<path d="M10.019 18.281V1.63812H17.0809L15.7333 16.6857" fill="#CFCFCF"/>
+					<path d="M4.59033 3.79526H10.0189V5.95716H6.96177L7.16177 8.17145H10.0189V10.3286H5.18081L4.59033 3.79526ZM5.27605 11.4143H7.44748L7.59986 13.1429L10.0189 13.7905V16.0476L5.58081 14.8095" fill="#888888"/>
+					<path d="M15.4283 3.79526H10.0093V5.95716H15.2283L15.4283 3.79526ZM15.0331 8.17145H10.0093V10.3334H12.6759L12.4236 13.1429L10.0093 13.7905V16.0381L14.4378 14.8095" fill="#393939"/>
+				</svg>
+				index.html
+			</div>
+
+			<pre class="c-code-block__code">
+
+{% highlight yaml %}
+---
+quotes:
+  - name: '...'
+    position: '...'
+    image: '...'
+    quote_markdown: '...'
+  - name: '...'
+    position: '...'
+    image: '...'
+    quote_markdown: '...'
+---
+{% endhighlight %}
+			</pre>
+		</div>
+	</div>
+</div>
+<div class="c-editable">
+	<div class="c-quotes cms-editor-link" data-cms-editor-link="cloudcannon:#quotes">
+		{% for quote in page.quotes %}
+			<div class="c-quotes__block">
+				<div class="c-quotes__text">{{ quote.quote_markdown | markdownify }}</div>
+					
+				<div class="c-quotes__author">
+					<img class="c-quotes__author-image" src="{{ quote.image }}">
+					<div class="c-quotes__author-content">
+						<p>{{ quote.name }}</p>
+						<p>{{ quote.position }}</p>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+		<div class="c-quotes__block c-quotes__block--missing">
+			<h3 class="c-quotes__missing-header">Add a quote</h3>
+			<p class="c-quotes__missing-description">Open the Front Matter to edit a quote or create a new one.</p>
+		</div>
+	</div>
+</div>
+<p class="c-editable-disclaimer">Click save to see your changes update</p>
+
+
+<div class="c-cta">
+	<div class="c-cta__inner">
+		<h1>That’s the basics of the Visual editor.</h1>
+		<p>Now it’s time to get started with one of our templates. (Or even build your own site!)</p>
+
+		<div class="c-buttons-row c-buttons-row--centered">
+			<a href="cloudcannon:!sites/templates" class="c-button c-button--primary">
+				Load a template
+			</a>
+
+			<a href="cloudcannon:!sites/create" class="c-button">
+				Set up my own site
+			</a>
+		</div>
+	</div>
+</div>

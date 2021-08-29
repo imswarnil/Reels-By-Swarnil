@@ -1,0 +1,28 @@
+.c-hero {
+	max-width: 840px;
+	margin: 200px auto;
+	display: flex;
+	gap: 40px;
+	align-items: center;
+	justify-content: center;
+
+	&__content {
+		max-width: 640px;
+		text-align: center;
+	}
+
+	&__image {
+		flex: 1 1 100px;
+
+		&::before {
+			content: "";
+			display: block;
+			border-radius: var(--border-radius);
+			width: 100%;
+			padding-bottom: 100%;
+			background: rgba(238, 238, 238, 0.4);
+			border: 1px solid #EEEEEE;
+			box-sizing: border-box;
+		}
+	}
+}

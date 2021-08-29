@@ -1,0 +1,43 @@
+
+.c-editable {
+	max-width: 800px;
+	padding: 60px;
+	border: 2px solid var(--color-stratus);
+	background: #fff;
+	z-index: 10;
+	position: relative;
+	display: flex;
+	gap: 20px;
+	box-sizing: border-box;
+	border-radius: 8px;
+	margin: 20px auto 10px auto;
+	flex-wrap: wrap;
+    box-shadow: 0 8px 46px -13px rgba(53, 67, 97, 0.15);
+
+	&__half {
+		flex: 1 1 200px;
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	&__code {
+		padding: 20px;
+		margin: -40px 0 0 20px;
+		border-radius: 4px;
+		white-space: pre-wrap;
+		overflow: auto;
+		width: calc(100% - 20px);
+		box-sizing: border-box;
+
+		background: #393939;
+		color: #ffffff;
+	}
+}
+
+.c-editable-disclaimer {
+	margin: 0 0 200px;
+	text-align: center;
+}

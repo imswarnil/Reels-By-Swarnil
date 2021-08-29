@@ -1,0 +1,19 @@
+.c-callout {
+	display: flex;
+	gap: 10px;
+	padding: 20px;
+	background: #F0F5FF;
+	border-radius: 8px;
+	border-left: 5px solid var(--color-brand);
+	align-items: flex-start;
+
+	p {
+		margin: 0;
+	}
+
+	svg {
+		flex: 0 0 20px;
+		height: auto;
+		padding: 2px;;
+	}
+}
