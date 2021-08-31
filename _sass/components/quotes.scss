@@ -40,7 +40,15 @@
 
 	&__author-image {
 		flex: 0 0 40px;
-		margin: 0;
+		line-height: 0;
+
+		img {
+			width: 40px;
+			object-fit: cover;
+			margin: 0;
+			height: 40px;
+			border-radius: 20px;
+		}
 	}
 
 	&__author-content {
@@ -60,16 +68,4 @@
 	&__missing-description {
 		color: var(--color-neptune);
 	}
-
-
-    // @include breakpoint(laptop) {
-    //     grid-template-columns: 1fr 1fr;
-    //     min-height: 400px;
-    // }
-
-    // @include breakpoint(desktop) {
-    //     min-height: 680px;
-    // }
-
-
 }

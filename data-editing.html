@@ -144,7 +144,9 @@ quotes:
 				<div class="c-quotes__text">{{ quote.quote_markdown | markdownify }}</div>
 					
 				<div class="c-quotes__author">
-					<img class="c-quotes__author-image" src="{{ quote.image }}">
+					<div class="c-quotes__author-image">
+						<img alt="A photo of {{ quote.name }}" src="{{ quote.image }}">
+					</div>
 					<div class="c-quotes__author-content">
 						<p>{{ quote.name }}</p>
 						<p>{{ quote.position }}</p>
