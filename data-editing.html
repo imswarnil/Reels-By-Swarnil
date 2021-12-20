@@ -75,7 +75,7 @@ inputs:
 	</div>
 </div>
 <div class="c-editable">
-	<div class="c-post cms-editor-link" data-cms-editor-link="cloudcannon:#inputs">
+	<div class="c-post" data-cms-bind="#inputs">
 		<div class="c-post__content">
 			<p class="c-post__date">{{ page.inputs.date | date_to_long_string }}</p>
 			<h3 class="c-post__heading u-fancy-heading">{{ page.inputs.title }}</h3>
@@ -138,7 +138,7 @@ quotes:
 	</div>
 </div>
 <div class="c-editable">
-	<div class="c-quotes cms-editor-link" data-cms-editor-link="cloudcannon:#quotes">
+	<div class="c-quotes" data-cms-bind="#quotes">
 		{% for quote in page.quotes %}
 			<div class="c-quotes__block">
 				<div class="c-quotes__text">{{ quote.quote_markdown | markdownify }}</div>
