@@ -3,8 +3,8 @@ title: Reel Jekyll Template
 description: A minimal, functional theme for running a paid-membership publication on Ghost.
 logo: assets/images/logo.svg
 email: your-email@example.com
-description: Some descriptio
-baseurl: "" # the subpath of your site, e.g. /blog
+description: Lorem
+baseurl: /demo-jekyll-template # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
