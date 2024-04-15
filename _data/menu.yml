@@ -2,8 +2,8 @@
   url: /
 - title: Post
   url: /blog
-- title: Membership
-  url: /membership
+- title: About
+  url: /about
 - title: Services
   url: /services
   dropdown:
