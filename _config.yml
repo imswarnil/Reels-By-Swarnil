@@ -9,6 +9,11 @@ twitter_username: jekyllrb
 github_username:  jekyll
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+
+
+sass:
+  style: compressed
 
 exclude:
   - .sass-cache/
