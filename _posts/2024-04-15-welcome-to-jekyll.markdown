@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
-image : https://i.pinimg.com/564x/04/e9/ce/04e9ce0a58724c71de0fb0ba4cb12fdc.jpg
+image : https://placehold.co/1200x720?text=Hi\nWorld
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
