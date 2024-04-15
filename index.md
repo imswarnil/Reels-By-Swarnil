@@ -1,0 +1,98 @@
+---
+layout : default
+---
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+
+<section class="section hero" aria-label="home">
+  <div class="container">
+
+    <h1 class="h1 hero-title">
+      <strong class="strong">Hey, we’re Blogy.</strong> See our thoughts, stories, and ideas.
+    </h1>
+
+    <div class="wrapper">
+
+      <form action="YOUR_FORM_ACTION_URL_HERE" class="newsletter-form" method="post">
+        <input type="email" name="email_address" placeholder="Your email address" class="email-field" required>
+
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+
+      <p class="newsletter-text">
+        Get the email newsletter and unlock access to members-only content and updates
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section featured" aria-label="featured post">
+  <div class="container">
+
+    <p class="section-subtitle">
+      Get started with our <strong class="strong">best stories</strong>
+    </p>
+
+    <ul class="has-scrollbar">
+
+      {% for post in site.posts %}
+      <li class="scrollbar-item">
+        <div class="blog-card">
+
+          <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
+            <img src="{{ post.image }}" width="500" height="600" loading="lazy" alt="{{ post.title }}"
+              class="img-cover">
+
+            <ul class="avatar-list absolute">
+              {% for author in post.authors %}
+              <li class="avatar-item">
+                <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
+                  <img src="{{ author.avatar }}" width="100" height="100" loading="lazy" alt="{{ author.name }}"
+                    class="img-cover">
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </figure>
+
+          <div class="card-content">
+
+            <ul class="card-meta-list">
+              {% for category in post.categories %}
+              <li>
+                <a href="#" class="card-tag">{{ category }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+
+            <h3 class="h4">
+              <a href="{{ post.url }}" class="card-title hover:underline">
+                {{ post.title }}
+              </a>
+            </h3>
+
+            <p class="card-text">
+              {{ post.excerpt | strip_html | truncatewords: 50 }}
+            </p>
+
+          </div>
+
+        </div>
+      </li>
+      {% endfor %}
+
+    </ul>
+
+  </div>
+</section>

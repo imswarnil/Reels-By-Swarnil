@@ -1,18 +1,101 @@
+{% assign site_title = site.title | default: 'My Site' %}
+{% assign site_logo = site.logo | default: nil %}
 
-	
-<nav>
-	<div class="container">
-		<div class="c-nav">
-			<img src="{{ site.data.nav.logo_image_path }}" alt="{{ site.data.nav.company_name }} Logo">
-			<ul class="c-nav__list">
-				{% for item in site.data.nav.header %}
-					<li class="c-nav__list-item">
-						<a class="c-nav__list-link{% if item.url == page.url %} active{% endif %}" href="{{ item.url }}">
-							{{ item.title }}
-						</a>
-					</li>
-				{% endfor %}
-			</ul>
-		</div>
-	</div>
-</nav>
+<header class="header section" data-header>
+  <div class="container">
+
+    {% if site_logo %}
+      <a href="{{ site.baseurl }}/" class="logo">
+        <img src="{{ site_logo }}" width="129" height="40" alt="{{ site_title }}">
+      </a>
+    {% else %}
+      <a href="{{ site.baseurl }}/" class="logo">{{ site_title }}</a>
+    {% endif %}
+
+    <nav class="navbar" data-navbar>
+      <ul class="navbar-list">
+        {% for item in site.data.menu %}
+          <li class="navbar-item">
+            <a href="{{ item.url }}" class="navbar-link hover:underline" data-nav-link>{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <div class="wrapper">
+
+     <button class="search-btn" aria-label="search" data-search-toggler>
+          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+
+          <span class="span">Search</span>
+        </button>
+
+      <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+        <span class="span one"></span>
+        <span class="span two"></span>
+        <span class="span three"></span>
+      </button>
+
+      <a href="#" class="btn">Join</a>
+
+    </div>
+
+  </div>
+</header>
+
+
+<div class="search-bar" data-search-bar>
+
+    <div class="input-wrapper">
+      <input type="search" name="search" placeholder="Search" class="input-field">
+
+      <button class="search-close-btn" aria-label="close search bar" data-search-toggler>
+        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+    </div>
+
+    <p class="search-bar-text">Please enter at least 3 characters</p>
+
+  </div>
+
+  <div class="overlay" data-overlay data-search-toggler></div>
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ site.url }}"
+    }
+    {% for item in site.data.menu %}
+    ,
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index | plus: 1 }},
+      "name": "{{ item.title }}",
+      "item": "{{ site.url }}{{ item.url }}"
+    }
+    {% endfor %}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "{{ site_title }}",
+  "url": "{{ site.url }}",
+  "logo": "{{ site_logo }}",
+  "sameAs" : [
+    "https://www.facebook.com/{{ site.facebook_username }}",
+    "https://twitter.com/{{ site.twitter_username }}"
+  ]
+}
+</script>

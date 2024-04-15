@@ -1,0 +1,46 @@
+/* Import your existing CSS variables */
+@import url('path/to/your/style.css');
+
+/* Custom styles for the post layout */
+.post {
+  margin: 0 auto;
+  max-width: 800px; /* Adjust as needed */
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: var(--radius-16);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+  margin-bottom: 20px;
+}
+
+.post-header h1 {
+  font-size: var(--fs-2);
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  font-size: var(--fs-7);
+  color: var(--eerie-black_60);
+}
+
+.post-image {
+  margin-bottom: 20px;
+}
+
+.post-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-16);
+}
+
+.post-content {
+  line-height: 1.6;
+}
+
+.post-excerpt {
+  font-size: var(--fs-6);
+  font-style: italic;
+  margin-bottom: 20px;
+}

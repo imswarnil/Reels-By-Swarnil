@@ -1,0 +1,53 @@
+# _data/footer.yml
+
+footer_menu:
+  - title: Social
+    items:
+      - name: Facebook
+        link: "#"
+        icon: logo-facebook
+      - name: Twitter
+        link: "#"
+        icon: logo-twitter
+      - name: Pinterest
+        link: "#"
+        icon: logo-pinterest
+      - name: Vimeo
+        link: "#"
+        icon: logo-vimeo
+  - title: About
+    items:
+      - name: Style Guide
+        link: "#"
+      - name: Features
+        link: "#"
+      - name: Contact
+        link: "#"
+      - name: 404
+        link: "#"
+      - name: Privacy Policy
+        link: "#"
+  - title: Features
+    items:
+      - name: Upcoming Events
+        link: "#"
+      - name: Blog & News
+        link: "#"
+      - name: Features
+        link: "#"
+      - name: FAQ Question
+        link: "#"
+      - name: Testimonial
+        link: "#"
+  - title: Membership
+    items:
+      - name: Account
+        link: "#"
+      - name: Membership
+        link: "#"
+      - name: Subscribe
+        link: "#"
+      - name: Tags
+        link: "#"
+      - name: Authors
+        link: "#"
