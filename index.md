@@ -6,7 +6,7 @@ layout : default
   <div class="container">
 
     <h1 class="h1 hero-title">
-      <strong class="strong">Hey, we’re Blogy.</strong> See our thoughts, stories, and ideas.
+      <strong class="strong">{{site.hero_name}}</strong> See our thoughts, stories, and ideas.
     </h1>
 
     <div class="wrapper">
