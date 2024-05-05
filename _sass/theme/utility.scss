@@ -82,6 +82,11 @@
   height: 100%;
   object-fit: cover;
 }
+img {
+  max-width: 100%; /* Ensure images don't exceed their container's width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any default inline spacing */
+}
 
 .has-scrollbar {
   display: flex;

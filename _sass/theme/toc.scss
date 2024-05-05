@@ -1,0 +1,41 @@
+.toc {
+    position: relative;
+    max-height: 80vh; /* Limit the maximum height of TOC to 80% of viewport height */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .toc h3 {
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+  
+  .toc ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .toc ul ul {
+    margin-left: 20px; /* Indent sub-levels */
+  }
+  
+  .toc a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .toc a:hover {
+    color: #007bff;
+  }
+  
+  /* Sticky TOC on large devices */
+  @media screen and (min-width: 768px) {
+    .toc {
+      position: sticky;
+      top: 20px; /* Adjust as needed */
+    }
+  }
+  

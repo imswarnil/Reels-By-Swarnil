@@ -7,11 +7,28 @@ description: Lorem
 url: 'https://reel.imswarnil.com' # the subpath of your site, e.g. /blog # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
+permalink: /:title
+hero_title: Hi I Am Prachi
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-toc
 
-
+# _config.yml
+toc:
+  min_level: 1
+  max_level: 6
+  ordered_list: false
+  no_toc_section_class: no_toc_section
+  list_id: toc
+  list_class: section-nav
+  sublist_class: ''
+  item_class: toc-entry
+  item_prefix: toc-
+  
+paginate: 5  # Number of posts per page
+paginate_path: "/page:num/"
 sass:
   style: compressed
 
